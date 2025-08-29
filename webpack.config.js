@@ -4,8 +4,9 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 const __dirname = path.resolve("./");
 
 export default {
+  cache: false,
   mode: "development",
-  entry: "./src/main.js",
+  entry: "./src/main.tsx",
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
@@ -16,7 +17,9 @@ export default {
       filename: "index.html",
     }),
   ],
-
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js', '.jsx', '.json']
+  },
   module: {
     rules: [
       {

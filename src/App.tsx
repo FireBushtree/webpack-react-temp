@@ -1,4 +1,4 @@
-function App(props) {
+function App(props: any) {
   return (
     <div>
       {props.message}
