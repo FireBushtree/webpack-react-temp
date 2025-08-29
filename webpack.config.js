@@ -4,7 +4,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 const __dirname = path.resolve('./')
 
-const mode = 'production'
+const mode = 'development'
 const isProd = mode === 'production'
 
 export default {
