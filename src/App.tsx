@@ -3,7 +3,7 @@ function App(props: any) {
     <div>
       {props.message}
       <span>123</span>
-      <div>34</div>
+      <div>34123</div>
     </div>
   );
 }
