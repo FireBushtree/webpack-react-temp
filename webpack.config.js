@@ -1,11 +1,15 @@
 import path from 'node:path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 
 const __dirname = path.resolve('./')
 
+const mode = 'production'
+const isProd = mode === 'production'
+
 export default {
   cache: false,
-  mode: 'development',
+  mode,
   entry: './src/main.tsx',
   output: {
     filename: 'main.js',
@@ -15,6 +19,9 @@ export default {
     new HtmlWebpackPlugin({
       template: './index.html',
       filename: 'index.html',
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'styles/[name].[contenthash].css',
     }),
   ],
   resolve: {
@@ -29,6 +36,10 @@ export default {
         test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node_modules/,
         use: 'swc-loader',
+      },
+      {
+        test: /\.css$/i,
+        use: [isProd ? MiniCssExtractPlugin.loader : 'style-loader', 'css-loader', 'postcss-loader'],
       },
     ],
   },
