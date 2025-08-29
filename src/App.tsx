@@ -5,7 +5,7 @@ function App(props: any) {
       <span>123</span>
       <div>34123</div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

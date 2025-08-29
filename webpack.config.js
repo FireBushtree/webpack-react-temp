@@ -1,20 +1,20 @@
-import path from "path";
-import HtmlWebpackPlugin from "html-webpack-plugin";
+import path from 'node:path'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
 
-const __dirname = path.resolve("./");
+const __dirname = path.resolve('./')
 
 export default {
   cache: false,
-  mode: "development",
-  entry: "./src/main.tsx",
+  mode: 'development',
+  entry: './src/main.tsx',
   output: {
-    filename: "main.js",
-    path: path.resolve(__dirname, "dist"),
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./index.html",
-      filename: "index.html",
+      template: './index.html',
+      filename: 'index.html',
     }),
   ],
   resolve: {
@@ -28,8 +28,8 @@ export default {
       {
         test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node_modules/,
-        use: 'swc-loader'
-      }
-    ]
-  }
-};
+        use: 'swc-loader',
+      },
+    ],
+  },
+}
