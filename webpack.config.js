@@ -11,6 +11,7 @@ export default (env, argv) => {
     cache: false,
     entry: './src/main.tsx',
     output: {
+      publicPath: '/',
       filename: 'main.js',
       path: path.resolve(__dirname, 'dist'),
     },
