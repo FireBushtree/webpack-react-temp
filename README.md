@@ -4,6 +4,7 @@
 
 - [x] Webpack
 - [x] React
-- [x] Eslint
+- [x] Biome
 - [x] TypeScript
-- [] TailWind
+- [x] TailWind
+- [x] react-router

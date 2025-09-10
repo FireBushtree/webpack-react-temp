@@ -1,6 +1,11 @@
 import { createRoot } from 'react-dom/client'
-import App from '@/App'
+import { BrowserRouter } from 'react-router'
 import './index.css'
+import AppRoutes from './routes'
 
 const container = document.querySelector('#app')!
-createRoot(container).render(<App message="vvvv1ccv" />)
+createRoot(container).render(
+  <BrowserRouter>
+    <AppRoutes />
+  </BrowserRouter>,
+)
